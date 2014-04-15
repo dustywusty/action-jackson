@@ -1,5 +1,5 @@
-# Action Jackson,
-* S tarring carl weathers as apollolo creed
+# Action Jackson
+* Starring carl weathers as apollolo creed
 
 ![Alt text](https://raw.githubusercontent.com/clarkda/repo-images/master/action-jackson.js/actionjackson.png "I aint got time to bleed")
 
