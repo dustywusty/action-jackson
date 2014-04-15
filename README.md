@@ -61,6 +61,20 @@ PingGithub.prototype.execute = function() {
 module.exports = PingGithub
 ```
 
+```
+chunk:uptime dusty$ node index.js
+17:38:19 - INFO  - action-jackson - action_manager - initializing
+17:38:19 - INFO  - action-jackson - action_manager - loading actions
+17:38:19 - INFO  - action-jackson - action_manager - .. DeployInfo
+17:38:19 - INFO  - action-jackson - action_manager - .. MogFlicks
+17:38:19 - INFO  - action-jackson - action_manager - .. PingGithub
+17:38:19 - INFO  - action-jackson - listening on port 3000
+17:38:19 - INFO  - action-jackson - mongoose connected to mongodb://localhost:27017/actionjackson
+17:38:49 - INFO  - action-jackson - action_manager - deploy_info - 3.2.0.64
+17:38:50 - INFO  - action-jackson - action_manager - mog_flicks - mog flicks is alive
+17:38:51 - INFO  - action-jackson - action_manager - ping_github - host github.com is alive
+```
+
 # Todo
 * Each action should have its own interval
 * Maybe should include parameters per action. ex. so a single ping action could be used for X hosts
