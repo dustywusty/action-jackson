@@ -11,9 +11,9 @@ Action Jackson executes plugins on a specified interval.
 http://localhost:port/actions/ - lists all registered actions
 http://localhost:port/actions/add - registers a new action
 
-`
+```
 curl -i -X POST http://localhost:3000/actions/add --data '{"actionPlugin":"PingGithub", "name":"ping-github"}' -H "Content-Type: application/json"
-`
+```
 
 # How?
 
@@ -24,7 +24,7 @@ curl -i -X POST http://localhost:3000/actions/add --data '{"actionPlugin":"PingG
 
 # Example
 
-`
+```
 var Action = require('../../lib/action.js')
   , log = require('logule').init(module, 'ping_github')
   , ping = require("ping")
@@ -58,7 +58,7 @@ PingGithub.prototype.execute = function() {
 // ..
 
 module.exports = PingGithub
-`
+```
 
 # Todo
 * Each action should have it's own interval
