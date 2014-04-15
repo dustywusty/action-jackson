@@ -5,7 +5,7 @@
 
 # What?
 
-Action Jackson executes plugins on a specified interval.
+Action Jackson executes `action` plugins on a specified interval
 
 # API
 
@@ -62,5 +62,5 @@ module.exports = PingGithub
 ```
 
 # Todo
-* Each action should have it's own interval
+* Each action should have its own interval
 * Maybe should include parameters per action. ex. so a single ping action could be used for X hosts
