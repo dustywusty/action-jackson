@@ -1,4 +1,5 @@
-# Action Jackson, starring carl weathers as apollolo creed
+# Action Jackson,
+* S tarring carl weathers as apollolo creed
 
 ![Alt text](https://raw.githubusercontent.com/clarkda/repo-images/master/action-jackson.js/actionjackson.png "I aint got time to bleed")
 
@@ -17,10 +18,10 @@ curl -i -X POST http://localhost:3000/actions/add --data '{"actionPlugin":"PingG
 
 # How?
 
-1. Action plugins must inherit from Action and
-2. Action plugins must override ::execute and ::actionName
-3. Put plugin def into actions/<ActionName>/index.js
-4. At interval specified in config::pollIntervalDelay, action jackson will fetch registered actions, and ::execute each one
+* Action plugins must inherit from Action and
+* Action plugins must override ::execute and ::actionName
+* Put plugin def into actions/<ActionName>/index.js
+* At interval specified in config::pollIntervalDelay, action jackson will fetch registered actions, and ::execute each one
 
 # Example
 
