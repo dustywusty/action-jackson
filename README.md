@@ -25,10 +25,6 @@ curl -i -X POST http://localhost:3000/actions/add --data '{"actionPlugin":"PingG
 curl -i -X POST http://localhost:3000/actions/remove --data '{"name":"ping-github"}' -H "Content-Type: application/json"
 ```
 
-## Contributing
-
-Feel free to suggest any changes or bury me in pull requests!
-
 ## I want to make a plugin!
 
 * Action plugins must inherit from `Action`
@@ -73,16 +69,22 @@ PingGithub.prototype.execute = function() {
 module.exports = PingGithub
 
 ```
+
 ```
-chunk:uptime dusty$ node index.js
-17:38:19 - INFO  - action-jackson - action_manager - initializing
-17:38:19 - INFO  - action-jackson - action_manager - loading actions
-17:38:19 - INFO  - action-jackson - action_manager - .. DeployInfo
-17:38:19 - INFO  - action-jackson - action_manager - .. MogFlicks
-17:38:19 - INFO  - action-jackson - action_manager - .. PingGithub
-17:38:19 - INFO  - action-jackson - listening on port 3000
-17:38:19 - INFO  - action-jackson - mongoose connected to mongodb://localhost:27017/actionjackson
-17:38:49 - INFO  - action-jackson - action_manager - deploy_info - 3.2.0.64
-17:38:50 - INFO  - action-jackson - action_manager - mog_flicks - mog flicks is alive
-17:38:51 - INFO  - action-jackson - action_manager - ping_github - host github.com is alive
+chunk:action-jackson dusty$ node index.js
+18:13:49 - INFO  - action-jackson - action_manager - initializing
+18:13:49 - INFO  - action-jackson - action_manager - loading actions
+18:13:49 - INFO  - action-jackson - action_manager - .. DeployInfo
+18:13:49 - INFO  - action-jackson - action_manager - .. MogFlicks
+18:13:49 - INFO  - action-jackson - action_manager - .. PingGithub
+18:13:49 - INFO  - action-jackson - listening on port 3000
+18:13:49 - INFO  - action-jackson - mongoose connected to mongodb://localhost:27017/actionjackson
+18:14:19 - INFO  - action-jackson - action_manager - deploy_info - 3.2.0.64
+18:14:19 - INFO  - action-jackson - action_manager - mog_flicks - mog flicks is alive
+18:14:19 - INFO  - action-jackson - action_manager - ping_github - host github.com is alive
+18:14:19 - INFO  - action-jackson - action_manager - ping_github - host pages.github.com is alive
 ```
+
+## Contributing
+
+Feel free to suggest any changes or bury me in pull requests!
