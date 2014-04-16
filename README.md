@@ -32,7 +32,7 @@ curl -i -X POST http://localhost:3000/actions/remove --data '{"name":"ping-githu
 * Define your action plugin in ./actions/ActionPluginName/index.js
 * Restart the app
 
-## PingGithub Example Plugin
+### PingGithub Example Plugin
 
 ```javascript
 var Action = require('../../lib/plugin.js')
