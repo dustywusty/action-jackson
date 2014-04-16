@@ -5,16 +5,26 @@
 
 # What?
 
-Action Jackson executes `action` plugins on a specified interval
+Action Jackson executes `action plugins` on a specified interval
 
 # API
 
-http://localhost:port/actions/ - lists all registered actions
-http://localhost:port/actions/add - registers a new action
-
+* http://localhost:port/actions/ - lists all registered actions
 ```
 curl -i -X POST http://localhost:3000/actions/add --data '{"actionPlugin":"PingGithub", "name":"ping-github"}' -H "Content-Type: application/json"
 ```
+
+* http://localhost:port/actions/add - registers a new action
+```
+curl -i -X POST http://localhost:3000/actions/add --data '{"actionPlugin":"PingGithub", "name":"ping-github"}' -H "Content-Type: application/json"
+```
+* http://localhost:port/actions/remove - removes a  action
+
+```
+curl -i -X POST http://localhost:3000/actions/remove --data '{"name":"ping-github"}' -H "Content-Type: application/json"
+```
+
+
 
 # How?
 
@@ -26,7 +36,7 @@ curl -i -X POST http://localhost:3000/actions/add --data '{"actionPlugin":"PingG
 # Example
 
 ```
-var Action = require('../../lib/action.js')
+var Action = require('../../lib/plugin.js')
   , log = require('logule').init(module, 'ping_github')
   , ping = require("ping")
   , util = require('util');
