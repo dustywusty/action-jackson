@@ -9,21 +9,19 @@ Action Jackson executes `action plugins` on a specified interval
 
 # API
 
-* http://localhost:port/actions/ - lists all registered actions
+* lists all actions
 ```
 curl -i -X GET http://localhost:3000/actions/
 ```
-* http://localhost:port/actions/add - registers a new action
+* add a new action
 ```
 curl -i -X POST http://localhost:3000/actions/add --data '{"actionPlugin":"PingGithub", "name":"ping-github"}' -H "Content-Type: application/json"
 ```
-* http://localhost:port/actions/remove - removes a  action
+* removes a action
 
 ```
 curl -i -X POST http://localhost:3000/actions/remove --data '{"name":"ping-github"}' -H "Content-Type: application/json"
 ```
-
-
 
 # How?
 
@@ -83,7 +81,3 @@ chunk:uptime dusty$ node index.js
 17:38:50 - INFO  - action-jackson - action_manager - mog_flicks - mog flicks is alive
 17:38:51 - INFO  - action-jackson - action_manager - ping_github - host github.com is alive
 ```
-
-# Todo
-* Each action should have its own interval
-* Maybe should include parameters per action. ex. so a single ping action could be used for X hosts
