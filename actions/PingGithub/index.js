@@ -1,12 +1,11 @@
-var Action = require('../../lib/action.js')
+var Action = require('../../lib/plugin.js')
   , log = require('logule').init(module, 'ping_github')
   , ping = require("ping")
   , util = require('util');
 
-/**
- *
- * @constructor
- */
+// ------------------------------------------------------------------------------------
+// Ping Github.com example plugin
+// ------------------------------------------------------------------------------------
 
 var PingGithub = function() {
   this.actionName = 'PingGithub';
@@ -15,11 +14,11 @@ var PingGithub = function() {
 util.inherits(PingGithub, Action);
 
 /**
- * is github.com up?
+ * is github.com & pages.github.com up?
  */
 
 PingGithub.prototype.execute = function() {
-  var hosts = ['github.com'];
+  var hosts = ['github.com', 'pages.github.com'];
   hosts.forEach(function(host){
     ping.sys.probe(host, function(isAlive){
       var msg = isAlive ? 'host ' + host + ' is alive' : 'host ' + host + ' is dead';
