@@ -2,27 +2,34 @@
 
 ![Alt text](https://raw.githubusercontent.com/clarkda/repo-images/master/action-jackson.js/actionjackson.png "I aint got time to bleed")
 
-### What?
+## What is this?
 
 Action Jackson executes `action plugins` on a specified intervals
 
 ### API
 
 #### lists all actions
+
 ```
 curl -i -X GET http://localhost:3000/actions/
 ```
 #### add a new action
+
 ```
 curl -i -X POST http://localhost:3000/actions/add --data '{"actionPlugin":"PingGithub", "name":"ping-github"}' -H "Content-Type: application/json"
 ```
 
 #### remove a action
+
 ```
 curl -i -X POST http://localhost:3000/actions/remove --data '{"name":"ping-github"}' -H "Content-Type: application/json"
 ```
 
-### I want to make a plugin!
+## Contributing
+
+Feel free to suggest any changes or bury me in pull requests!
+
+## I want to make a plugin!
 
 * Action plugins must inherit from `Action`
 * And they must override `execute` and `actionName`
@@ -66,7 +73,9 @@ PingGithub.prototype.execute = function() {
 module.exports = PingGithub
 
 ```
+
 ### Output
+
 ```
 chunk:uptime dusty$ node index.js
 17:38:19 - INFO  - action-jackson - action_manager - initializing
@@ -80,3 +89,4 @@ chunk:uptime dusty$ node index.js
 17:38:50 - INFO  - action-jackson - action_manager - mog_flicks - mog flicks is alive
 17:38:51 - INFO  - action-jackson - action_manager - ping_github - host github.com is alive
 ```
+
