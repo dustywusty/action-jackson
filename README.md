@@ -1,36 +1,35 @@
-### Action Jackson
-* Starring CARL WEATHERS as Apollolo Creed
+### Action Jackson (Starring CARL WEATHERS as Apollolo Creed)
 
 ![Alt text](https://raw.githubusercontent.com/clarkda/repo-images/master/action-jackson.js/actionjackson.png "I aint got time to bleed")
 
 ### What?
 
-Action Jackson executes `action plugins` on a specified interval
+Action Jackson executes `action plugins` on a specified intervals
 
 ### API
 
-* lists all actions
+#### lists all actions
 ```
 curl -i -X GET http://localhost:3000/actions/
 ```
-* add a new action
+#### add a new action
 ```
 curl -i -X POST http://localhost:3000/actions/add --data '{"actionPlugin":"PingGithub", "name":"ping-github"}' -H "Content-Type: application/json"
 ```
-* removes a action
 
+#### remove a action
 ```
 curl -i -X POST http://localhost:3000/actions/remove --data '{"name":"ping-github"}' -H "Content-Type: application/json"
 ```
 
-### How?
+### I want to make a plugin!
 
-* Action plugins must inherit from Action and
-* Action plugins must override ::execute and ::actionName
-* Place plugin definition into actions/ActionName/index.js
-* At interval specified in config::pollIntervalDelay, action jackson will fetch registered actions, and ::execute each one
+* Action plugins must inherit from `Action`
+* And they must override `execute` and `actionName`
+* Define your action plugin in ./actions/ActionPluginName/index.js
+* Restart the app
 
-### Example
+### PingGithub example plugin
 
 ```javascript
 var Action = require('../../lib/plugin.js')
@@ -67,7 +66,7 @@ PingGithub.prototype.execute = function() {
 module.exports = PingGithub
 
 ```
-
+### Output
 ```
 chunk:uptime dusty$ node index.js
 17:38:19 - INFO  - action-jackson - action_manager - initializing
