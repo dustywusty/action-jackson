@@ -1,13 +1,13 @@
-# Action Jackson
+### Action Jackson
 * Starring CARL WEATHERS as Apollolo Creed
 
 ![Alt text](https://raw.githubusercontent.com/clarkda/repo-images/master/action-jackson.js/actionjackson.png "I aint got time to bleed")
 
-# What?
+### What?
 
 Action Jackson executes `action plugins` on a specified interval
 
-# API
+### API
 
 * http://localhost:port/actions/ - lists all registered actions
 ```
@@ -25,25 +25,24 @@ curl -i -X POST http://localhost:3000/actions/remove --data '{"name":"ping-githu
 
 
 
-# How?
+### How?
 
 * Action plugins must inherit from Action and
 * Action plugins must override ::execute and ::actionName
 * Place plugin definition into actions/ActionName/index.js
 * At interval specified in config::pollIntervalDelay, action jackson will fetch registered actions, and ::execute each one
 
-# Example
+### Example
 
-```
+```javascript
 var Action = require('../../lib/plugin.js')
   , log = require('logule').init(module, 'ping_github')
   , ping = require("ping")
   , util = require('util');
 
-/**
- *
- * @constructor
- */
+// ------------------------------------------------------------------------------------
+// Ping Github.com example plugin
+// ------------------------------------------------------------------------------------
 
 var PingGithub = function() {
   this.actionName = 'PingGithub';
@@ -52,11 +51,11 @@ var PingGithub = function() {
 util.inherits(PingGithub, Action);
 
 /**
- * is github.com up?
+ * is github.com & pages.github.com up?
  */
 
 PingGithub.prototype.execute = function() {
-  var hosts = ['github.com'];
+  var hosts = ['github.com', 'pages.github.com'];
   hosts.forEach(function(host){
     ping.sys.probe(host, function(isAlive){
       var msg = isAlive ? 'host ' + host + ' is alive' : 'host ' + host + ' is dead';
@@ -68,6 +67,7 @@ PingGithub.prototype.execute = function() {
 // ..
 
 module.exports = PingGithub
+
 ```
 
 ```
@@ -84,6 +84,6 @@ chunk:uptime dusty$ node index.js
 17:38:51 - INFO  - action-jackson - action_manager - ping_github - host github.com is alive
 ```
 
-# Todo
+### Todo
 * Each action should have its own interval
 * Maybe should include parameters per action. ex. so a single ping action could be used for X hosts
