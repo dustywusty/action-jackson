@@ -11,9 +11,8 @@ Action Jackson executes `action plugins` on a specified interval
 
 * http://localhost:port/actions/ - lists all registered actions
 ```
-curl -i -X POST http://localhost:3000/actions/add --data '{"actionPlugin":"PingGithub", "name":"ping-github"}' -H "Content-Type: application/json"
+curl -i -X GET http://localhost:3000/actions/
 ```
-
 * http://localhost:port/actions/add - registers a new action
 ```
 curl -i -X POST http://localhost:3000/actions/add --data '{"actionPlugin":"PingGithub", "name":"ping-github"}' -H "Content-Type: application/json"
