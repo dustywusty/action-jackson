@@ -36,7 +36,7 @@ Feel free to suggest any changes or bury me in pull requests!
 * Define your action plugin in ./actions/ActionPluginName/index.js
 * Restart the app
 
-### PingGithub example plugin
+## PingGithub Example Plugin
 
 ```javascript
 var Action = require('../../lib/plugin.js')
@@ -73,9 +73,6 @@ PingGithub.prototype.execute = function() {
 module.exports = PingGithub
 
 ```
-
-### Output
-
 ```
 chunk:uptime dusty$ node index.js
 17:38:19 - INFO  - action-jackson - action_manager - initializing
@@ -89,4 +86,3 @@ chunk:uptime dusty$ node index.js
 17:38:50 - INFO  - action-jackson - action_manager - mog_flicks - mog flicks is alive
 17:38:51 - INFO  - action-jackson - action_manager - ping_github - host github.com is alive
 ```
-
