@@ -1,19 +1,23 @@
 {
-  "name": "whatup",
+  "name": "action-jackson",
   "version": "0.0.1",
   "dependencies": {
     "express": "~3.4.8",
-    "express-validator": "~1.0.1",
     "mongoose": "~3.8.5",
     "request": "~2.33.0",
     "underscore": "~1.5.2",
     "connect-mongo": "~0.4.0",
-    "logule" : "*",
-    "moment" : "*",
-    "mocha" : "*",
-    "ping" : "*",
-    "paperwork" : "*",
-    "supertest" : "*"
+    "logule": "*",
+    "moment": "*",
+    "ping": "*",
+    "paperwork": "*"
+  },
+  "devDependencies" : {
+    "jshint" : "*",
+    "jshint-stylish" : "*",
+    "madge": "*",
+    "mocha": "*",
+    "supertest": "*"
   },
   "scripts": {
     "test": "make test"
