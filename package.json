@@ -19,6 +19,9 @@
     "mocha": "*",
     "supertest": "*"
   },
+  "jshintConfig" : {
+    "laxcomma" : "true"
+  },
   "scripts": {
     "test": "make test"
   }
