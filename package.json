@@ -20,7 +20,8 @@
     "supertest": "*"
   },
   "jshintConfig" : {
-    "laxcomma" : "true"
+    "laxcomma" : "true",
+    "strict" : "true"
   },
   "scripts": {
     "test": "make test"
