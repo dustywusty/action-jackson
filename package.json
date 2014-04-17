@@ -20,6 +20,7 @@
     "supertest": "*"
   },
   "jshintConfig" : {
+    "curly" : "true",
     "laxcomma" : "true",
     "strict" : "true"
   },
