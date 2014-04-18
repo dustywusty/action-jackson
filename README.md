@@ -1,4 +1,4 @@
-### Action Jackson
+## Action Jackson
 
 ![Alt text](https://raw.githubusercontent.com/clarkda/repo-images/master/action-jackson.js/actionjackson.png "Starring CARL WEATHERS as Apollolo Creed")
 
