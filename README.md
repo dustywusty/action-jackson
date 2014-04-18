@@ -1,6 +1,6 @@
-### Action Jackson (Starring CARL WEATHERS as Apollolo Creed)
+### Action Jackson
 
-![Alt text](https://raw.githubusercontent.com/clarkda/repo-images/master/action-jackson.js/actionjackson.png "I aint got time to bleed")
+![Alt text](https://raw.githubusercontent.com/clarkda/repo-images/master/action-jackson.js/actionjackson.png "Starring CARL WEATHERS as Apollolo Creed")
 
 ## What is this?
 
